@@ -1,0 +1,163 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNqtp0Ih3Dp8BV/xb2bg7By",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Harisankari-11/codsoft-internship/blob/main/task%202%20simple%20calculator\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def main():\n",
+        "        print(\"\\n\\t\\t\\t***SIMPLE CALCULATOR ***\\n\")\n",
+        "        while True :\n",
+        "            print(\"1.ADDITION\")\n",
+        "            print(\"2.SUBTRACTION\")\n",
+        "            print(\"3.MULTIPLICATION\")\n",
+        "            print(\"4.DIVISION\")\n",
+        "            print(\"5.MODULUS\")\n",
+        "            print(\"6.FLOOR DIVISION\")\n",
+        "            print(\"7.POWER\")\n",
+        "            print(\"8.EXIT\")\n",
+        "            choice =int(input(\"\\nEnter your Choice : \"))\n",
+        "\n",
+        "            if(choice == 8):\n",
+        "                print(\"\\n\\n\")\n",
+        "                break\n",
+        "            elif(choice>8):\n",
+        "                print(\"\\nINVALID CHOICE , PLEASE TRY AGAIN LATER\\n\")\n",
+        "            else:\n",
+        "                a = int(input(\"\\nEnter the first Number : \"))\n",
+        "                b = int(input(\"Enter the Second Number : \"))\n",
+        "\n",
+        "                if(choice == 1):\n",
+        "                    add(a,b)\n",
+        "                elif(choice == 2):\n",
+        "                    sub(a,b)\n",
+        "                elif(choice == 3):\n",
+        "                    mul(a,b)\n",
+        "                elif(choice == 4):\n",
+        "                    div(a,b)\n",
+        "                elif(choice == 5):\n",
+        "                    mod(a,b)\n",
+        "                elif(choice == 6):\n",
+        "                    flr(a,b)\n",
+        "                elif(choice == 7):\n",
+        "                    power(a,b)\n",
+        "                elif(choice == 8):\n",
+        "                    print(\"\\nExiting from Calculator......\\n\")\n",
+        "                    break;\n",
+        "                else:\n",
+        "                    print(\"\\nINVALID CHOICE , PLEASE TRY AGAIN LATER\\n\")\n",
+        "\n",
+        "\n",
+        "# defining the functions above\n",
+        "\n",
+        "\n",
+        "# addition\n",
+        "def add(n,m):\n",
+        "    result = n+m\n",
+        "    print(f\"\\nAddition of {n} and {m} is : {result}\")\n",
+        "    print(\"________________________________________\")\n",
+        "\n",
+        " # subtraction\n",
+        "def sub(n,m):\n",
+        "    result = n-m\n",
+        "    print(f\"\\nSubtraction of {n} and {m} is : {result}\")\n",
+        "    print(\"________________________________________\")\n",
+        "\n",
+        "# multiplication\n",
+        "def mul(n,m):\n",
+        "    result = n*m\n",
+        "    print(f\"\\nMultiplication of {n} and {m} is : {result}\")\n",
+        "    print(\"________________________________________\")\n",
+        "\n",
+        "# division\n",
+        "def div(n,m):\n",
+        "    if(m == 0):\n",
+        "        print(\"\\nCan't Divide by 'Zero'\")\n",
+        "    else:\n",
+        "        result = n/m\n",
+        "        print(f\"\\nDivision of {n} and {m} is : {result}\")\n",
+        "    print(\"________________________________________\")\n",
+        "\n",
+        "# modulus\n",
+        "def mod(n,m):\n",
+        "    if(m == 0):\n",
+        "        print(\"\\nCan't Divide by 'Zero'\")\n",
+        "    else:\n",
+        "        result = n%m\n",
+        "        print(f\"\\nModulus of {n} and {m} is : {result}\")\n",
+        "    print(\"________________________________________\")\n",
+        "\n",
+        "# floor division\n",
+        "def flr(n,m):\n",
+        "    if(m == 0):\n",
+        "        print(\"\\nCan't Divide by 'Zero'\")\n",
+        "    else:\n",
+        "        result = n//m\n",
+        "        print(f\"\\nFloor Division of {n} and {m} is : {result}\")\n",
+        "    print(\"________________________________________\")\n",
+        "\n",
+        "# power() method\n",
+        "def power(n,m):\n",
+        "    result = n**m\n",
+        "    print(f\"\\n{n} to the Power of {m} is : {result}\")\n",
+        "    print(\"________________________________________\")\n",
+        "\n",
+        "# main function\n",
+        "if __name__ == \"__main__\":\n",
+        "        main()\n",
+        "        print(\"\\n\\t\\tThanks for using..........\\n\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "BL9PVDJkvOqb",
+        "outputId": "3b442e51-2685-461f-b478-41003a406cf4"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "\t\t\t***SIMPLE CALCULATOR ***\n",
+            "\n",
+            "1.ADDITION\n",
+            "2.SUBTRACTION\n",
+            "3.MULTIPLICATION\n",
+            "4.DIVISION\n",
+            "5.MODULUS\n",
+            "6.FLOOR DIVISION\n",
+            "7.POWER\n",
+            "8.EXIT\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
