@@ -1,0 +1,127 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPJv+raleLubXPhxjqK3AQ3",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Harisankari-11/codsoft-internship/blob/main/TASK%204-%20ROCK%20PAPER%20SCISSOR%20GAME\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "TASK 4\n",
+        "ROCK PAPER SCISSOR GAME\n"
+      ],
+      "metadata": {
+        "id": "DzQHISZupWD8"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "fgoqOvFMpNCk",
+        "outputId": "de6203be-d7d1-46f2-ebab-9e29eb769723"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "Rock, Paper, Scissors, Exit\n",
+            "Choose your weapon [R]ock, [P]aper, [S]cissors, [E]xit: P\n",
+            "You chose: P\n",
+            "Computer chose: P\n",
+            "It's a tie!\n",
+            "\n",
+            "Rock, Paper, Scissors, Exit\n",
+            "Choose your weapon [R]ock, [P]aper, [S]cissors, [E]xit: R\n",
+            "You chose: R\n",
+            "Computer chose: R\n",
+            "It's a tie!\n",
+            "\n",
+            "Rock, Paper, Scissors, Exit\n",
+            "Choose your weapon [R]ock, [P]aper, [S]cissors, [E]xit: R\n",
+            "You chose: R\n",
+            "Computer chose: S\n",
+            "You win!\n",
+            "\n",
+            "Rock, Paper, Scissors, Exit\n",
+            "Choose your weapon [R]ock, [P]aper, [S]cissors, [E]xit: S\n",
+            "You chose: S\n",
+            "Computer chose: S\n",
+            "It's a tie!\n",
+            "\n",
+            "Rock, Paper, Scissors, Exit\n",
+            "Choose your weapon [R]ock, [P]aper, [S]cissors, [E]xit: P\n",
+            "You chose: P\n",
+            "Computer chose: R\n",
+            "You win!\n",
+            "\n",
+            "Rock, Paper, Scissors, Exit\n"
+          ]
+        }
+      ],
+      "source": [
+        "import random\n",
+        "\n",
+        "while True:\n",
+        "    print(\"\\nRock, Paper, Scissors, Exit\")\n",
+        "\n",
+        "    # Taking input from user\n",
+        "    userChoice = input(\"Choose your weapon [R]ock, [P]aper, [S]cissors, [E]xit: \").strip().upper()\n",
+        "\n",
+        "    # Validating user input\n",
+        "    if userChoice not in ['R', 'P', 'S', 'E']:\n",
+        "        print(\"Please choose a valid option: [R]ock, [P]aper, [S]cissors, [E]xit\")\n",
+        "        continue\n",
+        "\n",
+        "    # Exit game if user chooses 'E'\n",
+        "    if userChoice == 'E':\n",
+        "        print('Exiting Game..')\n",
+        "        break\n",
+        "\n",
+        "    # Print the user's choice\n",
+        "    print(\"You chose:\", userChoice)\n",
+        "\n",
+        "    # Generate computer's choice\n",
+        "    computerChoice = random.choice(['R', 'P', 'S'])\n",
+        "    print(\"Computer chose:\", computerChoice)\n",
+        "\n",
+        "    # Determine the winner based on choices\n",
+        "    if userChoice == computerChoice:\n",
+        "        print(\"It's a tie!\")\n",
+        "    elif (userChoice == 'R' and computerChoice == 'S') or \\\n",
+        "         (userChoice == 'S' and computerChoice == 'P') or \\\n",
+        "         (userChoice == 'P' and computerChoice == 'R'):\n",
+        "        print(\"You win!\")\n",
+        "    else:\n",
+        "        print(\"Computer wins!\")"
+      ]
+    }
+  ]
+}
